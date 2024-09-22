@@ -16,7 +16,7 @@ from langchain_community.embeddings import BedrockEmbeddings
 import boto3
 
 # Initialize a boto3 client for AWS Bedrock
-bedrock = boto3.client('bedrock-runtime') 
+bedrock = boto3.client('bedrock-runtime',region_name='us-east-1') 
 
 # Define embeddings using the Bedrock client and a specific model
 embeddings = BedrockEmbeddings(
